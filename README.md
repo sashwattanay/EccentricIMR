@@ -15,50 +15,17 @@ See [Hinder, Kidder and Pfeiffer - An eccentric binary black hole inspiral-merge
 
 ## Installation
 
-You can install EccentricIMR either using Git (recommended) or by
-downloading a zip file.
+You can install EccentricIMR by downloading a zip file.
 
-### Using Git (recommended)
-
-Change into your Mathematica applications directory.
-
-For Mac OS,
-
-    cd ~/Library/Mathematica/Applications
-
-For Linux,
-
-    cd ~/.Mathematica/Applications
-
-Clone the repository
-
-    git clone https://github.com/ianhinder/EccentricIMR.git
-
-### Zip file download
-
-- Download
-[master.zip](https://github.com/ianhinder/EccentricIMR/archive/master.zip),
+- Download [master.zip](https://github.com/sashwattanay/EccentricIMR/archive/master.zip),
 - Extract the zip file
-- Rename the extracted directory EccentricIMR-master as
-EccentricIMR
-- Move the directory into your Mathematica applications directory
+- There is a directory 'EccentricIMR' in '4PN_IMR_package' (plots the full IMR; does not work for large eccentricities) and also in '4PN_Inspiral_only_package' (plots only the inspiral part; works for large eccentricities too).
+- Move the 'EccentricIMR' directory (from either the '4PN_IMR_package' directory or the '4PN_Inspiral_only_package' directory) into your Mathematica applications directory
 (~/Library/Mathematica/Applications on Mac OS,
 ~/.Mathematica/Applications on Linux)
+- The file 'How to run the packages.nb' has commands that will run the packages and plot the waveforms.
+- The file 'Lengthy_expressions.nb' contains some lengthy expressions which we did not present in the paper... for the sake of brevity. 
 
-## Quick start
-
-Open a new Mathematica notebook and enter the following:
-
-    << EccentricIMR`;
-
-    params = <|"q" -> 1, "x0" -> 0.07, "e0" -> 0.1,
-               "l0" -> 0, "phi0" -> 0, "t0" -> 0|>;
-    
-    hEcc = EccentricIMRWaveform[params, {0, 10000}];
-    
-    ListLinePlot[Re[hEcc]]
-
-![Eccentric waveform](ecc-waveform.png)
 
 ## Documentation
 
@@ -80,22 +47,3 @@ phi0	   | Orbital phase at the reference time
 See [arXiv:0806.1037](http://arxiv.org/abs/arXiv:0806.1037) for full details about the meaning of the parameters.
 
 The returned waveform is expressed as a list of {t, h22} pairs, where t is the retarted time coordinate and h22 is the l=2, m=2 spin-weighted spherical harmonic coefficient of the waveform.
-
-Example:
-
-    In[1]:= hEcc = EccentricIMRWaveform[<|"q" -> 1, "x0" -> 0.07,
-      "e0" -> 0.1, "l0" -> 0, "phi0" -> 0, "t0" -> 0|>,
-      {0, 10000}];
-    
-    In[2]:= Take[hEcc, 10]
-    
-    Out[2]:= {{0., -0.127741 + 0.000381028 I}, {1., -0.127596 + 
-    0.00619006 I}, {2., -0.127182 + 0.0119862 I}, {3., -0.126498 + 
-    0.0177567 I}, {4., -0.125546 + 0.0234884 I}, {5., -0.12433 + 
-    0.0291683 I}, {6., -0.122851 + 0.0347835 I}, {7., -0.121113 + 
-    0.0403215 I}, {8., -0.119122 + 0.0457697 I}, {9., -0.11688 + 
-    0.051116 I}}
-
-## Tests
-
-Open the notebook EccentricIMRTests.nb from the package directory and evaluate it.  The will run tests of several internal functions, as well as EccentricIMRWaveform.
