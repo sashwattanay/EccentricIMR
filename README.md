@@ -24,7 +24,7 @@ You can install EccentricIMR by downloading a zip file.
 (~/Library/Mathematica/Applications on Mac OS,
 ~/.Mathematica/Applications on Linux)
 - The file 'How to run the packages.nb' has commands that will run the packages and plot the waveforms.
-- The file 'Lengthy_expressions.nb' contains some lengthy expressions which we did not present in the paper... for the sake of brevity. 
+- The file 'Lengthy_expressions.nb' contains some lengthy expressions which we did not present in the paper for the sake of brevity. 
 
 
 ## Documentation
