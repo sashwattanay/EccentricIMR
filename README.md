@@ -19,7 +19,8 @@ You can install EccentricIMR by downloading a zip file.
 
 - Download [master.zip](https://github.com/sashwattanay/EccentricIMR/archive/master.zip),
 - Extract the zip file
-- There is a directory 'EccentricIMR' in '4PN_IMR_package' (plots the full IMR; does not work for large eccentricities) and also in '4PN_Inspiral_only_package' (plots only the inspiral part; works for large eccentricities too).
+- There is a directory 'EccentricIMR' in '4PN_IMR_package' (plots the full IMR; does not work for large eccentricities) and also in '4PN_Inspiral_only_package'
+(uses only the post-Newtonian equations; works for large eccentricities too).
 - Move the 'EccentricIMR' directory (from either the '4PN_IMR_package' directory or the '4PN_Inspiral_only_package' directory) into your Mathematica applications directory
 (~/Library/Mathematica/Applications on Mac OS,
 ~/.Mathematica/Applications on Linux)
