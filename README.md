@@ -24,10 +24,10 @@ You can install EccentricIMR by downloading a zip file.
 - Move the 'EccentricIMR' directory (from either the '4PN_IMR_package' directory or the '4PN_Inspiral_only_package' directory) into your Mathematica applications directory
 (~/Library/Mathematica/Applications on Mac OS,
 ~/.Mathematica/Applications on Linux)
-- The file 'How to run the packages.nb' has commands that will run the packages and plot the waveforms.
+- The file 'How to run the packages.nb' has commands that will run the packages and plot the waveforms. Alternatively, see the Sec. "How to run the packages" below. 
 - The file 'Lengthy_expressions.nb' contains some lengthy expressions which we did not present in the paper for the sake of brevity. 
 
-## How to run the package
+## How to run the packages
 Once the Mathematica package directory has been moved to the correct location (as explained above), the following codes are to be run to generate the waveforms
 
 For the full IMR package
