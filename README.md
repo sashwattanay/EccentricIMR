@@ -27,6 +27,36 @@ You can install EccentricIMR by downloading a zip file.
 - The file 'How to run the packages.nb' has commands that will run the packages and plot the waveforms.
 - The file 'Lengthy_expressions.nb' contains some lengthy expressions which we did not present in the paper for the sake of brevity. 
 
+## How to run the package
+Once the Mathematica package directory has been moved to the correct location (as explained above), the following codes are to be run to generate the waveforms
+
+For the full IMR package
+```
+<<EccentricIMR`;
+params=<|"q"->1,"x0"->0.07,"e0"->0.1,"l0"->0,"phi0"->0,"t0"->0|>;
+hEcc=EccentricIMRWaveform[params,{0,10000}];
+ListLinePlot[Re[hEcc]]
+```
+
+For the Inspiral-only package
+```
+<< EccentricIMR`;
+finTime1 = 
+  10000;                              (*final time; end of simulation*)
+
+params = <|"q" -> 1, "x0" -> 0.07, "e0" -> 0.25, "l0" -> 0, 
+   "phi0" -> 0, "t0" -> 0|>;
+dt =  1 ;                                 
+hEcc = EccentricIMRWaveform[params, {0,   finTime1     , dt}];
+ifun = hEcc["h"]  ;     
+InterFun = hEcc["h"] ;
+iniTime  =    ((InterFun@Domain)[[1]])[[1]]   ;
+finTime =      ((InterFun@Domain)[[1]])[[2]]   ;
+nDiv = Round[(finTime - iniTime)/dt];                  
+timeArr = Array[# &, nDiv + 1, {iniTime, finTime}];     
+sigArr = Re[ifun[timeArr]];                       
+ListLinePlot[sigArr]
+```
 
 ## Documentation
 
