@@ -5,13 +5,11 @@
 A Mathematica package for generating gravitational waveforms for
 nonspinning eccentric binary black hole mergers.
 
-Requirements: Mathematica v10 (Jul 2014) or later
-
-EccentricIMR was written by Ian Hinder and is distributed under the terms of the GNU General Public Licence (GPL) version 2.
+EccentricIMR was originally written by Ian Hinder. This is a Git-forked version modified by Sashwat Tanay. 
 
 Copyright (C) Ian Hinder, 2017.
 
-See [Hinder, Kidder and Pfeiffer - An eccentric binary black hole inspiral-merger-ringdown gravitational waveform model from numerical relativity and post-Newtonian theory, 2017](http://arxiv.org/abs/1709.02007) for details of the construction of the waveform.
+This Mathematica package is based on this paper: [Generalized quasi-Keplerian solution for eccentric, non-spinning compact binaries at 4PN order and the associated IMR waveform, 2021](https://arxiv.org/abs/2110.09608).
 
 ## Installation
 
@@ -60,10 +58,6 @@ ListLinePlot[sigArr]
 
 ## Documentation
 
-### EccentricIMRWaveform[_parameters_, {_t1_, _t2_}]
-
-Generate an eccentric inspiral-merger-ringdown waveform with the parameters given in the time range {t1,t2}.  
-
 _parameters_ is an Association with the following entries:
 
 Parameter | Meaning
@@ -75,6 +69,6 @@ e0		   | Eccentricity at the reference time
 l0		   | Mean anomaly at the reference time
 phi0	   | Orbital phase at the reference time
 
-See [arXiv:0806.1037](http://arxiv.org/abs/arXiv:0806.1037) for full details about the meaning of the parameters.
+See [arXiv:2110.09608](https://arxiv.org/abs/2110.09608) for full details about the meaning of the parameters.
 
 The returned waveform is expressed as a list of {t, h22} pairs, where t is the retarted time coordinate and h22 is the l=2, m=2 spin-weighted spherical harmonic coefficient of the waveform.
