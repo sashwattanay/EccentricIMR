@@ -21,13 +21,16 @@ You can install EccentricIMR by downloading a zip file.
 (uses only the post-Newtonian equations; works for large eccentricities too).
 - Move the 'EccentricIMR' directory (from either the '4PN_IMR_package' directory or the '4PN_Inspiral_only_package' directory) into your Mathematica applications directory
 
-LINUX: for all users (requires root priviledges): /usr/share/Mathematica/Applications/
+LINUX: 
+for all users (requires root priviledges): /usr/share/Mathematica/Applications/
 for one user: $HOME/.Mathematica/Applications/
    
-MAC OS: for all users (requires root priviledges): /Library/Mathematica/Applications/
+MAC OS: 
+for all users (requires root priviledges): /Library/Mathematica/Applications/
 for one user: /Users/<user>/Library/Mathematica/Applications/
   
-WINDOWS: for all users: C:\Program Files\Wolfram Research\Mathematica\<version>\AddOns\Applications\
+WINDOWS: 
+for all users: C:\Program Files\Wolfram Research\Mathematica\<version>\AddOns\Applications\
 for one user: C:\Users\<user>\AppData\Roaming\Mathematica\Applications\
    
    
