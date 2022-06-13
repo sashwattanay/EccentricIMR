@@ -20,8 +20,18 @@ You can install EccentricIMR by downloading a zip file.
 - There is a directory 'EccentricIMR' in '4PN_IMR_package' (plots the full IMR; does not work for large eccentricities) and also in '4PN_Inspiral_only_package'
 (uses only the post-Newtonian equations; works for large eccentricities too).
 - Move the 'EccentricIMR' directory (from either the '4PN_IMR_package' directory or the '4PN_Inspiral_only_package' directory) into your Mathematica applications directory
-(~/Library/Mathematica/Applications on Mac OS,
-~/.Mathematica/Applications on Linux)
+
+Linux:
+   - for all users (requires root priviledges): /usr/share/Mathematica/Applications/
+   - for one user: $HOME/.Mathematica/Applications/
+   
+Mac OS:
+   - for all users (requires root priviledges): /Library/Mathematica/Applications/
+   - for one user: /Users/<user>/Library/Mathematica/Applications/
+  
+MSWindows:
+   - for all users: C:\Program Files\Wolfram Research\Mathematica\<version>\AddOns\Applications\
+   - for one user: C:\Users\<user>\AppData\Roaming\Mathematica\Applications\
 - The file 'How to run the packages.nb' has commands that will run the packages and plot the waveforms. Alternatively, see the Sec. "How to run the packages" below. 
 - The file 'Lengthy_expressions.nb' and 'Lengthy_expressions.pdf' contains some lengthy expressions which we did not present in the paper for the sake of brevity. 
 
